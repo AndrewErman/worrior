@@ -1,0 +1,55 @@
+[
+  {
+    "id": 0,
+    "category": 1,
+    "displayName": "H4",
+    "imgUrl": "",
+    "country": 1,
+    "century": [
+      "1450"
+    ],
+    "asset": 35,
+    "assetName": "Hip_Brigant"
+  },
+  {
+    "id": 1,
+    "category": 1,
+    "displayName": "H3",
+    "imgUrl": "",
+    "country": 1,
+    "century": [
+      "1275"
+    ],
+    "asset": 0,
+    "assetName": "Biceps_Rusj"
+  },
+  {
+    "id": 2,
+    "category": 1,
+    "displayName": "H2",
+    "imgUrl": "",
+    "country": 1,
+    "century": [
+      "1400",
+      "1425",
+      "1450"
+    ],
+    "asset": 20,
+    "assetName": "Helm_ROA"
+  },
+  {
+    "id": 3,
+    "category": 1,
+    "displayName": "H1",
+    "imgUrl": "",
+    "country": 1,
+    "century": [
+      "1200",
+      "1225",
+      "1250",
+      "1275"
+    ],
+    "asset": 17,
+    "assetName": "Helm_Barbjut"
+  }
+]

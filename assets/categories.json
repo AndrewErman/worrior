@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Head",
+    "id": 1
+  },
+  {
+    "name": "Neck",
+    "id": 2
+  },
+  {
+    "name": "Torso",
+    "id": 5
+  },
+  {
+    "name": "Buttocks",
+    "id": 6
+  },
+  {
+    "name": "Shoulder",
+    "id": 7
+  },
+  {
+    "name": "Biceps",
+    "id": 8
+  },
+  {
+    "name": "Elbow",
+    "id": 9
+  },
+  {
+    "name": "Forearm",
+    "id": 10
+  },
+  {
+    "name": "Fists",
+    "id": 11
+  },
+  {
+    "name": "Hips",
+    "id": 12
+  },
+  {
+    "name": "Knee",
+    "id": 13
+  },
+  {
+    "name": "Shin",
+    "id": 14
+  },
+  {
+    "name": "Feet",
+    "id": 15
+  }
+]

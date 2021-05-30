@@ -223,7 +223,7 @@ export function Shell() {
             </div>
             <div css={ st.canvasView }>
                 <div css={ st.container }>
-                    <MainView/>
+                    <MainView />
                     <div css={ st.sideMenu }>
                         <SideMenu
                             stats={ shellState.services.getTotalItemsInCategory(shellState.services.getData()) }
