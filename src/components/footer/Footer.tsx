@@ -8,7 +8,10 @@ type FooterProps = {
 
 const order = css`
   text-align: center;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
 `;
 
 export class Footer extends React.PureComponent<FooterProps> {

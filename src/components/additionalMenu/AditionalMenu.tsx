@@ -21,6 +21,7 @@ export const menu = css`
   transform: translate(0,100%);
   opacity: 0;
   transition: transform, opacity 0.3s;
+  z-index: 2;
 `;
 
 const header = css`

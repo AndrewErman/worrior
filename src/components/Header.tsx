@@ -16,6 +16,7 @@ type HeaderProps = {
 const headerStyle = css`
   display: flex;
   justify-content: space-around;
+  //background: #33334C;
 `;
 
 const labelStyle = css`

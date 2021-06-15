@@ -11,13 +11,13 @@ export const canvasView = css`
 
 export const headerNav = css`
   padding: 10px;
-  background-color: #1f2323;;
+  //background-color: #33334C;
   text-align: right;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  margin-right: 30%;
+  margin-right: 150px;
   display: flex;
   justify-content: space-around;
 `;
@@ -39,7 +39,9 @@ export const loading = css`
 `;
 
 export const sideMenu = css`
-  width: 30%;
+  //width: 30%;
+  min-width: 150px;
+  width: fit-content;
   text-align: center;
   overflow-y: scroll;
   max-height: 600px;

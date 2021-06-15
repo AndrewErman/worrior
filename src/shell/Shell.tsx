@@ -2,7 +2,8 @@
 import * as React  from "react";
 import { jsx } from "@emotion/core";
 import * as st from "./shell-styles";
-import { SideMenu } from "../components/sideMenu/SideMenu";
+// import { SideMenu } from "../components/sideMenu/SideMenu";
+import { SideTable } from "../components/sideTable/SideTable";
 import { MainView } from "./Main";
 import { bootstrap } from "./bootstrap";
 import { Header } from "../components/Header";
@@ -223,14 +224,21 @@ export function Shell() {
             </div>
             <div css={ st.canvasView }>
                 <div css={ st.container }>
-                    <MainView />
-                    <div css={ st.sideMenu }>
-                        <SideMenu
+                    <div css={{ zIndex: 1, position: 'absolute', top: '60px', width: '100%' }}>
+                        <SideTable
                             stats={ shellState.services.getTotalItemsInCategory(shellState.services.getData()) }
                             onMenuItemSelected={ onCategorySelect }
                             data={ categories }
                         />
                     </div>
+                    <MainView />
+                    {/*<div css={ st.sideMenu }>*/}
+                    {/*    <SideMenu*/}
+                    {/*        stats={ shellState.services.getTotalItemsInCategory(shellState.services.getData()) }*/}
+                    {/*        onMenuItemSelected={ onCategorySelect }*/}
+                    {/*        data={ categories }*/}
+                    {/*    />*/}
+                    {/*</div>*/}
                 </div>
                 <Footer onOrderButtonClick={ openOrderSection }/>
                 <AdditionalMenu onClose={ onSectionClose } open={ openedSection !== Sections.Main }>

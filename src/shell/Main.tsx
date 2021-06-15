@@ -4,7 +4,7 @@ import * as React from "react";
 import { css, jsx } from "@emotion/core";
 
 const container = css`
-  width: 70%;
+  width: 100vw;
   cursor: pointer;
 `;
 
