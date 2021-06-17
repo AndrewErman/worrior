@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React  from "react";
-import { jsx } from "@emotion/core";
+import { css, jsx } from "@emotion/core";
 import * as st from "./shell-styles";
 // import { SideMenu } from "../components/sideMenu/SideMenu";
 import { SideTable } from "../components/sideTable/SideTable";
@@ -24,6 +24,12 @@ import * as BABYLON from "@babylonjs/core";
 type Models = { [key: string]: BABYLON.AbstractMesh; };
 let models: Models = {};
 const loadedModels: Models = {};
+
+
+const sideTableContainer = css`
+  position: absolute;
+  top: 60px;
+`
 
 export function Shell() {
     const shellState = useShellState();
@@ -121,6 +127,7 @@ export function Shell() {
         if (!loadedModels[mesh.name]) {
             shellState.services.setLoading(true);
         }
+
         mesh.visibility = 1;
     };
     // @ts-ignore
@@ -224,13 +231,13 @@ export function Shell() {
             </div>
             <div css={ st.canvasView }>
                 <div css={ st.container }>
-                    <div css={{ zIndex: 1, position: 'absolute', top: '60px', width: '100%' }}>
+                    <div css={sideTableContainer}>
                         <SideTable
                             stats={ shellState.services.getTotalItemsInCategory(shellState.services.getData()) }
                             onMenuItemSelected={ onCategorySelect }
                             data={ categories }
                         />
-                    </div>
+                    </div >
                     <MainView />
                     {/*<div css={ st.sideMenu }>*/}
                     {/*    <SideMenu*/}

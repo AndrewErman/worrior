@@ -5,9 +5,16 @@ import { Category } from "../../domain";
 import { SideTableItem } from "./SideTableItem";
 import { TotalItemsInCategory } from "../../shell/hooks/useShellState";
 
-const sideTable = css`
+const sideTableColl = css`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const sideTableRow = css`
+  display: flex;
+  position: absolute;
 `;
 
 type Props = {
@@ -18,19 +25,40 @@ type Props = {
 
 export const SideTable: React.FunctionComponent<Props> = (props) => {
     return (
-        <div css={sideTable}>
+        <div>
+            <div css={sideTableColl}>
+                {/*@ts-ignore*/}
+                {props.data.map((item, index) => {
+                    if(index < 8) {
+                        return (
+                            <SideTableItem
+                                count={props.stats[item.id]}
+                                category={item}
+                                key={item.id}
+                                onClick={props.onMenuItemSelected}
+                            />
 
-            {props.data.map((item) => {
-                return (
-                    <SideTableItem
-                        count={props.stats[item.id]}
-                        category={item}
-                        key={item.id}
-                        onClick={props.onMenuItemSelected}
-                    />
-
-                );
-            })}
+                        );
+                    }
+                    return null
+                })}
+            </div>
+            <div css={sideTableRow}>
+                {/*@ts-ignore*/}
+                {props.data.map((item, index) => {
+                    if(index > 8) {
+                        return (
+                            <SideTableItem
+                                count={props.stats[item.id]}
+                                category={item}
+                                key={item.id}
+                                onClick={props.onMenuItemSelected}
+                            />
+                        );
+                    }
+                    return null
+                })}
+            </div>
         </div>
     );
 };
